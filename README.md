@@ -30,8 +30,8 @@ npm run install-all
 2. Configurer les variables d'environnement:
 ```bash
 cd server
-cp .env.example .env
-# Éditer .env et configurer JWT_SECRET
+# Créer un fichier .env (voir server/ENV_SETUP.md)
+# Le fichier .env sera créé automatiquement au premier démarrage
 ```
 
 3. Démarrer le projet (backend + frontend):
@@ -48,6 +48,20 @@ npm run server
 # Terminal 2 - Frontend
 npm run client
 ```
+
+## Déploiement
+
+### Déploiement sur Vercel
+
+Le frontend peut être déployé sur Vercel. Voir le guide complet dans [DEPLOYMENT.md](./DEPLOYMENT.md).
+
+**Résumé rapide** :
+1. Déployer le backend sur Railway/Render (voir `DEPLOYMENT.md`)
+2. Déployer le frontend sur Vercel :
+   ```bash
+   vercel
+   ```
+3. Configurer la variable d'environnement `REACT_APP_API_URL` sur Vercel avec l'URL de votre backend
 
 ## Configuration
 
