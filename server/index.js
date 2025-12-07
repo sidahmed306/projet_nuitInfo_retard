@@ -17,7 +17,10 @@ const PORT = process.env.PORT || 4001;
 // Middleware
 const corsOptions = {
   origin: process.env.NODE_ENV === 'production' 
-    ? process.env.FRONTEND_URL?.split(',') || ['https://*.vercel.app']
+    ? process.env.FRONTEND_URL?.split(',') || [
+        'https://front-bde-miage.vercel.app',
+        'https://*.vercel.app'
+      ]
     : ['http://localhost:4000', 'http://localhost:3000'],
   credentials: true,
   optionsSuccessStatus: 200
